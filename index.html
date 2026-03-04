@@ -16,11 +16,28 @@
 </head>
 
 <body>
+    <!-- SVG Definitions for Gradients -->
+    <svg class="svg-defs">
+        <defs>
+            <linearGradient id="icon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4facfe" />
+                <stop offset="100%" stop-color="#00f2fe" />
+            </linearGradient>
+        </defs>
+    </svg>
+
     <div class="bg-glow"></div>
 
     <section class="hero">
         <div class="container">
-            <div class="badge">EST. 2026 • PRODUCT ECOSYSTEM</div>
+            <div class="badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                </svg>
+                EST. 2026 • PRODUCT ECOSYSTEM
+            </div>
             <h1>Empowering Human Intent <br>with Intelligent Tools.</h1>
             <p class="description">
                 Building the next generation of productivity, developer tools, and AI-driven experiences for a world
@@ -35,7 +52,12 @@
             <div class="products-grid">
                 <!-- Quikey -->
                 <a href="https://quikey.app" class="product-card" target="_blank">
-                    <div class="product-icon">🚀</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
                     <h3>QuiKey</h3>
                     <p>macOS Productivity Tool. Extend Finder and text selection with AI analysis, cloud upload, and
                         document conversion.</p>
@@ -49,7 +71,13 @@
 
                 <!-- Rexide -->
                 <a href="https://rex.mindmeld360.com" class="product-card" target="_blank">
-                    <div class="product-icon">⌘</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5" />
+                            <line x1="12" y1="19" x2="20" y2="19" />
+                        </svg>
+                    </div>
                     <h3>RexIDE</h3>
                     <p>The AI-Agentic IDE. A modern command center for AI agents with persistent terminal sessions and
                         real-time execution.</p>
@@ -63,7 +91,14 @@
 
                 <!-- Looppass -->
                 <a href="https://looppass.mindmeld360.com" class="product-card" target="_blank">
-                    <div class="product-icon">📱</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                            <line x1="12" y1="19" x2="12" y2="22" />
+                        </svg>
+                    </div>
                     <h3>Looppass</h3>
                     <p>AI Interview Training. Realistic voice-based interview prep for iOS to sharpen your technical and
                         behavioral skills.</p>
@@ -77,7 +112,13 @@
 
                 <!-- FilePad -->
                 <a href="https://filepad.mindmeld360.com" class="product-card" target="_blank">
-                    <div class="product-icon">📁</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
+                            <rect x="2" y="6" width="14" height="12" rx="2" />
+                        </svg>
+                    </div>
                     <h3>FilePad</h3>
                     <p>Quick Video Compression. Minimalist macOS utility for instant right-click video compression and
                         batch processing.</p>
@@ -91,7 +132,14 @@
 
                 <!-- Echo -->
                 <a href="https://echo.mindmeld360.com" class="product-card" target="_blank">
-                    <div class="product-icon">🎧</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                            <path
+                                d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                        </svg>
+                    </div>
                     <h3>Echo</h3>
                     <p>Slack-to-Podcast Briefings. Smart AI summaries of Slack channels delivered as high-quality audio
                         dialogues.</p>
@@ -108,7 +156,12 @@
             <div class="products-grid">
                 <!-- SignalNX -->
                 <a href="https://github.com/tomer-ben-david/2025-signalnx" class="product-card" target="_blank">
-                    <div class="product-icon">📡</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12h4l2-9 5 18 3-9h6" />
+                        </svg>
+                    </div>
                     <h3>SignalNX</h3>
                     <p>High-performance signal processing and networking utility for modern infrastructure.</p>
                     <div class="learn-more">GitHub Repository <span>→</span></div>
@@ -116,7 +169,17 @@
 
                 <!-- Sonix -->
                 <a href="https://github.com/tomer-ben-david/2025-sonix" class="product-card" target="_blank">
-                    <div class="product-icon">🔊</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 10v3" />
+                            <path d="M6 6v11" />
+                            <path d="M10 3v18" />
+                            <path d="M14 8v7" />
+                            <path d="M18 5v13" />
+                            <path d="M22 10v3" />
+                        </svg>
+                    </div>
                     <h3>Sonix</h3>
                     <p>Core audio engine and processing library optimized for real-time low-latency applications.</p>
                     <div class="learn-more">Explore Source <span>→</span></div>
@@ -124,7 +187,13 @@
 
                 <!-- DevX Spring Blog -->
                 <a href="https://github.com/tomer-ben-david/devx-spring-blog" class="product-card" target="_blank">
-                    <div class="product-icon">🍃</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
                     <h3>DevX Spring Blog</h3>
                     <p>Modern Blogging Platform. A clean, performance-optimized Spring Boot and Thymeleaf engine.</p>
                     <div class="learn-more">View on GitHub <span>→</span></div>
@@ -132,7 +201,13 @@
 
                 <!-- DevX TTS -->
                 <a href="https://github.com/tomer-ben-david/devx-tts" class="product-card" target="_blank">
-                    <div class="product-icon">🗣️</div>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M8.8 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-5l-4.2 3.82c-.32.29-.8.06-.8-.38V20Z" />
+                        </svg>
+                    </div>
                     <h3>DevX TTS</h3>
                     <p>Universal TTS Service. Lightweight local text-to-speech bridge for developers and automation.</p>
                     <div class="learn-more">Documentation <span>→</span></div>
@@ -147,7 +222,7 @@
                 <a href="/privacy-policy.html">Privacy Policy</a>
                 <a href="mailto:hello@mindmeld360.com">Contact</a>
             </div>
-            <p>&copy; 2025 MindMeld360. All rights reserved.</p>
+            <p>&copy; 2026 MindMeld360. All rights reserved.</p>
         </div>
     </footer>
 </body>
