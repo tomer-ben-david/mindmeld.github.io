@@ -57,7 +57,7 @@ h3 {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 0 6rem;
+    padding: 8rem 0 4rem;
     text-align: center;
 }
 
@@ -94,13 +94,13 @@ h3 {
     font-size: 1.25rem;
     color: var(--text-secondary);
     max-width: 650px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1rem;
     line-height: 1.8;
 }
 
 /* Products Grid */
 .products {
-    padding: 4rem 0 10rem;
+    padding: 2rem 0 8rem;
 }
 
 .section-title {
