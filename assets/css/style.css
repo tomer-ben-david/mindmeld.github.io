@@ -275,8 +275,8 @@ h3 {
 /* Product Tags */
 .product-tags {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 2.5rem;
+    right: 2.5rem;
     display: flex;
     gap: 0.5rem;
     z-index: 2;
