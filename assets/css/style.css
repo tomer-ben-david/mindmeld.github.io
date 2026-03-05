@@ -275,11 +275,14 @@ h3 {
 /* Product Tags */
 .product-tags {
     position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
+    top: 1.75rem;
+    right: 1.75rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 0.5rem;
     z-index: 2;
+    max-width: calc(100% - 110px);
 }
 
 .tag {
@@ -292,6 +295,11 @@ h3 {
     font-weight: 500;
     letter-spacing: 0.02em;
     backdrop-filter: blur(4px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .product-card.hidden {
