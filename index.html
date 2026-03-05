@@ -55,6 +55,8 @@
                 <button class="filter-btn" data-filter="macos">macOS</button>
                 <button class="filter-btn" data-filter="developer">Developer Tools</button>
                 <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="books">Books</button>
                 <button class="filter-btn" data-filter="productivity">Productivity</button>
             </div>
 
@@ -200,7 +202,9 @@
             <h2 class="section-title" style="margin-top: 6rem;">Open Source Infrastructure</h2>
             <div class="products-grid">
                 <!-- SignalNX -->
-                <a href="https://github.com/tomer-ben-david/2025-signalnx" class="product-card" target="_blank">
+                <a href="https://github.com/tomer-ben-david/2025-signalnx" class="product-card"
+                    data-category="infrastructure developer" target="_blank">
+                    <div class="product-tags"><span class="tag">Open Source</span><span class="tag">Infra</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -215,7 +219,9 @@
                 </a>
 
                 <!-- Sonix -->
-                <a href="https://github.com/tomer-ben-david/2025-sonix" class="product-card" target="_blank">
+                <a href="https://github.com/tomer-ben-david/2025-sonix" class="product-card"
+                    data-category="infrastructure developer" target="_blank">
+                    <div class="product-tags"><span class="tag">Open Source</span><span class="tag">Infra</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -231,7 +237,9 @@
                 </a>
 
                 <!-- DevX Spring Blog -->
-                <a href="https://github.com/tomer-ben-david/devx-spring-blog" class="product-card" target="_blank">
+                <a href="https://github.com/tomer-ben-david/devx-spring-blog" class="product-card"
+                    data-category="developer infrastructure" target="_blank">
+                    <div class="product-tags"><span class="tag">Open Source</span><span class="tag">Infra</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -246,7 +254,9 @@
                 </a>
 
                 <!-- DevX TTS -->
-                <a href="https://github.com/tomer-ben-david/devx-tts" class="product-card" target="_blank">
+                <a href="https://github.com/tomer-ben-david/devx-tts" class="product-card"
+                    data-category="developer infrastructure" target="_blank">
+                    <div class="product-tags"><span class="tag">Open Source</span><span class="tag">Infra</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -264,7 +274,8 @@
             <div class="products-grid">
                 <!-- Book 1 -->
                 <a href="https://www.amazon.com/Build-Unbreakable-Systems-engineering-confidence-ebook/dp/B0FMLHRRYH"
-                    class="product-card" target="_blank">
+                    class="product-card" data-category="books productivity" target="_blank">
+                    <div class="product-tags"><span class="tag">Book</span><span class="tag">System Design</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -280,7 +291,8 @@
 
                 <!-- Book 2 -->
                 <a href="https://www.amazon.com/TypeScript-Java-Developers-Comprehensive-TypeScripts-ebook/dp/B0FSSKPJZ8"
-                    class="product-card" target="_blank">
+                    class="product-card" data-category="books developer" target="_blank">
+                    <div class="product-tags"><span class="tag">Book</span><span class="tag">TypeScript</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -296,7 +308,8 @@
 
                 <!-- Book 3 -->
                 <a href="https://www.amazon.com/AUTOMATIC-Willpower-Based-Productivity-Automatic-Effortless-ebook/dp/B0FTMF58K8"
-                    class="product-card" target="_blank">
+                    class="product-card" data-category="books productivity" target="_blank">
+                    <div class="product-tags"><span class="tag">Book</span><span class="tag">Productivity</span></div>
                     <div class="product-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -326,7 +339,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filterBtns = document.querySelectorAll('.filter-btn');
-            const products = document.querySelectorAll('#core-products-grid .product-card');
+            const products = document.querySelectorAll('.product-card');
+            const sectionTitles = document.querySelectorAll('.section-title');
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -341,11 +355,29 @@
                         if (filter === 'all') {
                             product.classList.remove('hidden');
                         } else {
-                            const categories = product.getAttribute('data-category').split(' ');
+                            const categories = product.getAttribute('data-category') ? product.getAttribute('data-category').split(' ') : [];
                             if (categories.includes(filter)) {
                                 product.classList.remove('hidden');
                             } else {
                                 product.classList.add('hidden');
+                            }
+                        }
+                    });
+
+                    // Hide sections that have no visible products
+                    const productGrids = document.querySelectorAll('.products-grid');
+                    productGrids.forEach(grid => {
+                        const visibleProducts = grid.querySelectorAll('.product-card:not(.hidden)');
+                        const sectionTitle = grid.previousElementSibling;
+                        if (visibleProducts.length === 0) {
+                            grid.style.display = 'none';
+                            if (sectionTitle && sectionTitle.classList.contains('section-title')) {
+                                sectionTitle.style.display = 'none';
+                            }
+                        } else {
+                            grid.style.display = 'grid';
+                            if (sectionTitle && sectionTitle.classList.contains('section-title')) {
+                                sectionTitle.style.display = 'block';
                             }
                         }
                     });
