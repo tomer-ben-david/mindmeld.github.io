@@ -275,14 +275,14 @@ h3 {
 /* Product Tags */
 .product-tags {
     position: absolute;
-    top: 1.75rem;
-    right: 1.75rem;
+    top: 2rem;
+    right: 2rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 0.5rem;
     z-index: 2;
-    max-width: calc(100% - 110px);
+    max-width: calc(100% - 100px);
 }
 
 .tag {
