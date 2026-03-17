@@ -302,6 +302,25 @@ h3 {
     white-space: nowrap;
 }
 
+.product-credit {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    opacity: 0.4;
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    font-weight: 400;
+}
+
+.product-credit svg {
+    width: 10px;
+    height: 10px;
+}
+
 .product-card.hidden {
     display: none;
 }

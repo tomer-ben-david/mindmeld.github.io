@@ -1,0 +1,11 @@
+{
+  "name": "mindmeld.github.io",
+  "version": "1.0.0",
+  "description": "MindMeld360 Website",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
